@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio de Proporcionalidade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="video-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Revisão Rápida</h2>
+                <button class="close-btn" onclick="closeVideoModal()">&times;</button>
+            </div>
+            <div class="video-container">
+                <iframe id="review-video"
+                        src="https://www.youtube.com/embed/QxvjdrbBS_Y" 
+                        title="Revisão de Regra de Três" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <header class="header">
+            <h1>🎯 Desafio de Proporcionalidade</h1>
+            <p>Aprenda sobre proporções e regra de três de forma divertida!</p>
+            <button class="review-btn" onclick="openVideoModal()">💡 Revisar Conceito</button>
+        </header>
+        
+        <main class="content">
+            
+            <div id="phase1" class="phase">
+                <h2 class="phase-title">Fase 1: Identificando Proporções</h2>
+                <div class="progress">
+                    <div class="progress-bar" id="progress1" style="width: 0%"></div>
+                </div>
+                <div id="proportion-questions"></div>
+            </div>
+            
+            <div id="phase2" class="phase" style="display: none;">
+                <h2 class="phase-title">Fase 2: Regra de Três Simples</h2>
+                <div class="progress">
+                    <div class="progress-bar" id="progress2" style="width: 0%"></div>
+                </div>
+                <div id="quiz-questions"></div>
+            </div>
+
+            <div id="phase3" class="phase" style="display: none;">
+                <h2 class="phase-title">Fase 3 (Bônus): Análise Composta</h2>
+                <div class="progress">
+                    <div class="progress-bar" id="progress3" style="width: 0%"></div>
+                </div>
+                <div id="compound-questions"></div>
+            </div>
+            
+            <div id="results" class="phase" style="display: none;">
+                <div class="results">
+                    <h2 class="phase-title">🎉 Parabéns! Você completou o desafio!</h2>
+                    <div class="score" id="final-score"></div>
+                    <div id="resolutions"></div>
+                    <div class="study-tips">
+                        <h3>💡 Dicas de Estudo</h3>
+                        <ul>
+                            <li><strong>Proporção Direta:</strong> Se uma grandeza AUMENTA, a outra AUMENTA. (Flechas na mesma direção).</li>
+                            <li><strong>Proporção Inversa:</strong> Se uma grandeza AUMENTA, a outra DIMINUI. (Flechas em direções opostas).</li>
+                            <li><strong>Análise é o 1º Passo:</strong> Sempre identifique o tipo de proporção ANTES de calcular.</li>
+                        </ul>
+                    </div>
+                    <button class="restart-btn" onclick="restartGame()">🔄 Jogar Novamente</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
